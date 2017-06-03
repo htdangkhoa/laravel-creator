@@ -1,0 +1,6 @@
+echo -n "Enter project name: "
+read name
+
+cd /var/www/html && sudo composer create-project laravel/laravel $name --prefer-dist && sudo chmod 777 -R $name
+
+exec bash
